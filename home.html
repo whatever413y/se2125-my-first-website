@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    
+    <title>Home</title>
+  </head>
+
+  <body>
+    <div class="card" id="peopleList" style="border: none;">
+        <div class="card-body text-end">
+            <button class="btn btn-primary" onclick="openAddingWindow()">Add</button>  
+        </div>
+        <div class="card text-start" style="margin-top: 0;">
+            <div class="card-header">People</div>
+            <ul id="list" class="list-group list-group-flush">
+              <li class="list-group-item">John Doe</li>
+              <li class="list-group-item">Jane Doe</li>
+              <li class="list-group-item">Mr Bond</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" id="addingWindow" style="display: none;">
+        <div class="card-body">
+            <label class="card-title">First Name</label>
+            <input id='firstnameField' class="form-control" type='text' placeholder='First Name' />
+            <br />
+            <label class="card-title">Last Name</label>
+            <input id='lastnameField' class="form-control" type='text' placeholder='Last Name' />
+        </div>
+        <div class="card-body text-end">
+            <button class="btn btn-outline-danger" onclick='closeAddingWindow()'>Cancel</button>
+            <button class="btn btn-primary" onclick='addPerson()'>Add</button> 
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+
+</html>
