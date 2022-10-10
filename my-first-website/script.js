@@ -32,9 +32,11 @@ function addPerson() {
   let fullName = firstName.value + ' ' + lastName.value
   let ul = document.querySelector('#list')
   let li = document.createElement('li')
-  li.setAttribute('class', 'list-group-item')
-  li.appendChild(document.createTextNode(fullName))
-  ul.appendChild(li)
 
-  closeAddingWindow()
+  if(firstName.value != '' || lastName.value != '') {
+    li.setAttribute('class', 'list-group-item')
+    li.appendChild(document.createTextNode(fullName))
+    ul.appendChild(li)
+    closeAddingWindow()
+  }
 }
